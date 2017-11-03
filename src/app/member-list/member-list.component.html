@@ -3,5 +3,6 @@
 <div *ngFor="let member of members | async" (click)="goToDetailPage(member)" class="panel panel-default">
   <div class="panel-body">
     <h3>{{member.name}}</h3>
+    <h1>{{member.$key}}</h1>
   </div>
 </div>

@@ -18,11 +18,7 @@ export class MemberService {
   addMember(newMember: Member) {
     this.members.push(newMember);
   }
-  getMemberById(memberId: number) {
-    // for (var i = 0; i <= MEMBERS.length - 1; i++) {
-    //   if (MEMBERS[i].id === memberId) {
-    //     return MEMBERS[i];
-    //   }
-    // }
+  getMemberById(memberId: string) {
+    return this.database.object('members/' + memberId);
   }
 }
