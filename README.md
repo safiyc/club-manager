@@ -50,7 +50,6 @@ This project uses a cloud services provider called Firebase to store data. Below
 
 * Type '/src/app/api-keys.ts' in .gitignore
 
-
 * In the Firebase Project Overview webpage, visit the Database by selecting the Database option from the navbar on the left-hand side
 
 * While in the Database section, click on 'Rules' and replace the text with the below to allow the application to read and write to the Firebase database:
