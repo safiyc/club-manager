@@ -9,8 +9,8 @@ import { Router } from '@angular/router';
 })
 export class MemberListComponent implements OnInit {
   members: Member[] = [
-    new Member("Name1", "Description2", 1),
-    new Member("Name2", "Description2", 2)
+    new Member('Name1', 'Description2', 1),
+    new Member('Name2', 'Description2', 2)
   ];
 
   constructor(private router: Router) { }
@@ -20,6 +20,6 @@ export class MemberListComponent implements OnInit {
 
   goToDetailPage(clickedMember: Member) {
     this.router.navigate(['members', clickedMember.id]);
-  };
+  }
 
 }
