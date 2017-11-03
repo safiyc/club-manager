@@ -7,7 +7,8 @@ import { AppComponent } from './app.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { routing } from './app.routing';
 import { AboutComponent } from './about/about.component';
-import { ProfileListComponent } from './profile-list/profile-list.component';
+import { MemberListComponent } from './member-list/member-list.component';
+import { MemberDetailComponent } from './member-detail/member-detail.component';
 
 
 
@@ -16,7 +17,8 @@ import { ProfileListComponent } from './profile-list/profile-list.component';
     AppComponent,
     WelcomeComponent,
     AboutComponent,
-    ProfileListComponent
+    MemberListComponent,
+    MemberDetailComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,7 @@
+<h1>List of Members</h1>
+
+<div *ngFor="let member of members" (click)="goToDetailPage(member)" class="panel panel-default">
+  <div class="panel-body">
+    <h3>{{member.name}}</h3>
+  </div>
+</div>
