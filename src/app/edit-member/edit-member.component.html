@@ -1,0 +1,10 @@
+<h2>Edit Member</h2>
+
+<label>New Member Name:</label>
+<input [(ngModel)]="selectedMember.name">
+<br>
+
+<label>New Member Description:</label>
+<textarea [(ngModel)]="selectedMember.description"></textarea>
+
+<button (click)="beginUpdatingMember(selectedMember)">Update</button>
