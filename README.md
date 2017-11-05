@@ -10,7 +10,7 @@ This program lets an admin account add/edit/delete members of a club. Non-admin 
 
 ## Setup
 
-* Install Node.js and Angular CLI
+* Install <code>Node.js</code> and <code>Angular CLI</code>
 
 * Terminal- <code>git clone github-project-url</code>
 
@@ -18,25 +18,13 @@ This program lets an admin account add/edit/delete members of a club. Non-admin 
 
 * Terminal- <code>bower install</code>
 
-* Below is the setup for Firebase, a cloud services provider
+* Below is the <code>Firebase setup</code>, a cloud services provider
 
-  * Create an account on <code>www.firebase.google.com</code>
+  * Create an account on ww.firebase.google.com
 
   * Click on 'Create a New Project' on the user dashboard area of the website and name your project
 
-  * Terminal- while in your project directory, run
-    <code>npm install angularfire2@4.0.0-rc.0 firebase --save</code>
-
-  * Project root directory, in the 'compilerOptions' of the file 'tsconfig.json'- enter  
-    <pre>
-      "lib": ["es2016", "dom"],
-      "types": [ "firebase" ]
-    </pre>
   * On the 'Project Overview' webpage, click on 'Add Firebase to your web app'
-
-  * Create <code>api-keys.ts</code> file in app folder of project, and replace all x's letters with values from the 'Add Firebase to your web app' display
-
-  * Type <code>'/src/app/api-keys.ts'</code> in .gitignore file
 
   * In the Firebase Project Overview webpage, visit the Database by selecting the Database option from the navbar on the left-hand side
 
@@ -48,6 +36,20 @@ This program lets an admin account add/edit/delete members of a club. Non-admin 
           ".write": "true"
         }
       }
+    </pre>
+
+  * Terminal- while in your project directory, run
+      <code>npm install angularfire2@4.0.0-rc.0 firebase --save</code>
+
+  * Create <code>api-keys.ts</code> file in app folder of project and paste below text, and replace all x's letters with values from the 'Add Firebase to your web app' display
+    <pre>
+      export var masterFirebaseConfig = {
+        apiKey: "xxxx",
+        authDomain: "xxxx.firebaseapp.com",
+        databaseURL: "https://xxxx.firebaseio.com",
+        storageBucket: "xxxx.appspot.com",
+        messagingSenderId: "xxxx"
+      };
     </pre>
 
   * If error "Module not found: Error: Can't resolve 'promise-polyfill' in '.../firebase/app'", install in terminal <code>npm install promise-polyfill --save-exact</code>
@@ -74,7 +76,7 @@ Click here https://github.com/safiyc/club-manager.git to access the Github page 
 
 * Implement AngularFire/Firebase user authentication
 
-* Deploy your application. Include a link to the live site in your project's README
+* Deploy the application and include a link to the live site in the project's README
 
 
 ## License
