@@ -1,13 +1,14 @@
-<h2>Edit Member</h2>
-
-<label>New Member Name:</label>
-<input [(ngModel)]="selectedMember.name">
+<label>Edit Name:</label>
+<br>
+<input [(ngModel)]="selectedMember.name" size="16">
+<br>
 <br>
 
-<label>New Member Description:</label>
-<textarea [(ngModel)]="selectedMember.description"></textarea>
+<label>Edit Description:</label>
+<br>
+<textarea [(ngModel)]="selectedMember.description" rows="5" cols="50"></textarea>
 <hr>
-<button (click)="beginUpdatingMember(selectedMember)">Update</button>
-<button (click)="beginDeletingMember(selectedMember)">Delete</button>
+<button (click)="beginUpdatingMember(selectedMember)" class="btn btn-info">Update</button>
+<button (click)="beginDeletingMember(selectedMember)" class="btn btn-danger">Delete</button>
 <br>
 <br>

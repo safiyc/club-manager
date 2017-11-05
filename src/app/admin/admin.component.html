@@ -1,4 +1,4 @@
-<div class="panel panel-default">
+<div class="panel panel-default paragraph-width">
   <div class="panel-heading">
     <h1 class="panel-title">Add New Member</h1>
   </div>
@@ -6,16 +6,20 @@
     <div>
       <label>Name:</label>
       <br>
-      <input #newName>
+      <input #newName size="16">
     </div>
 
     <div>
       <label>Description:</label>
       <br>
-      <textarea #newDescription></textarea>
+      <textarea #newDescription rows="5" cols="50"></textarea>
     </div>
-    <button (click)="submitForm(newName.value, newDescription.value); newName.value=''; newDescription.value=''">Add</button>
+    <button (click)="submitForm(newName.value, newDescription.value); newName.value=''; newDescription.value=''"
+    class="btn btn-success">Add</button>
   </div>
 </div>
+<br>
 
 <app-member-list></app-member-list>
+<br>
+<br>

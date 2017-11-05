@@ -1,11 +1,11 @@
 <h1>List of Members</h1>
-
+<hr width="550px" align="left">
 <div *ngFor="let member of members | async"  class="panel panel-default">
   <div class="panel-body">
     <h3 (click)="goToDetailPage(member)">{{member.name}}</h3>
     <div *ngIf="currentRoute === '/admin'">
       {{member.description}}
-      <hr>
+      <hr width="550px" align="left">
       <app-edit-member [selectedMember]="member"></app-edit-member>
     </div>
   </div>
