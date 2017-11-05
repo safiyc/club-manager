@@ -1,67 +1,82 @@
-# ClubManager
+# Club Manager
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.5.0.
+#### Technologies used: HTML, CSS, Javascript, Node.js, Angular2, Firebase
 
-## Development server
+##### By Safiy Cham
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Description
 
-## Code scaffolding
+This program lets an admin account add/edit/delete members of a club. Non-admin users can see a list of members with their names and a brief description.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Setup
 
-## Build
+* Install Node.js and Angular CLI
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+* Terminal- <code>git clone github-project-url</code>
 
-## Running unit tests
+* Terminal- <code>npm install</code>
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+* Terminal- <code>bower install</code>
 
-## Running end-to-end tests
+* Below is the setup for Firebase, a cloud services provider
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+  * Create an account on <code>www.firebase.google.com</code>
 
-## Further help
+  * Click on 'Create a New Project' on the user dashboard area of the website and name your project
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+  * Terminal- while in your project directory, run
+    <code>npm install angularfire2@4.0.0-rc.0 firebase --save</code>
 
+  * Project root directory, in the 'compilerOptions' of the file 'tsconfig.json'- enter  
+    <pre>
+      "lib": ["es2016", "dom"],
+      "types": [ "firebase" ]
+    </pre>
+  * On the 'Project Overview' webpage, click on 'Add Firebase to your web app'
 
+  * Create <code>api-keys.ts</code> file in app folder of project, and replace all x's letters with values from the 'Add Firebase to your web app' display
 
-This project uses a cloud services provider called Firebase to store data. Below are the setup steps for Firebase:
+  * Type <code>'/src/app/api-keys.ts'</code> in .gitignore file
 
-* Create an account on www.firebase.google.com
+  * In the Firebase Project Overview webpage, visit the Database by selecting the Database option from the navbar on the left-hand side
 
-* Click on 'Create a New Project' on the user dashboard area of the website and name your project
-
-* Terminal- while in your project directory, run:
-  npm install angularfire2@4.0.0-rc.0 firebase --save
-
-* Project root directory on local computer- in the file 'tsconfig.json', type '"types": [ "firebase" ]' like so:
-  "lib": [
-      "es2016",
-      "dom"
-    ],
-    "types": [ "firebase" ]
-
-* On the 'Project Overview' webpage, click on 'Add Firebase to your web app'
-
-* Create 'api-keys.ts' file in app folder of project, and replace all 'xxx' letters with values from the 'Add Firebase to your web app' display
-
-* Type '/src/app/api-keys.ts' in .gitignore
-
-* In the Firebase Project Overview webpage, visit the Database by selecting the Database option from the navbar on the left-hand side
-
-* While in the Database section, click on 'Rules' and replace the text with the below to allow the application to read and write to the Firebase database:
-    {
-      "rules": {
-        ".read": "true",
-        ".write": "true"
+  * While in the Database section, click on 'Rules' and replace the text with the below to allow the application to read and write to the Firebase database
+    <pre>
+      {
+        "rules": {
+          ".read": "true",
+          ".write": "true"
+        }
       }
-    }
+    </pre>
 
-* If error "Module not found: Error: Can't resolve 'promise-polyfill' in `.../firebase/app'`", install the promise-polyfill package in the terminal:
-  npm install promise-polyfill --save-exact
+  * If error "Module not found: Error: Can't resolve 'promise-polyfill' in '.../firebase/app'", install in terminal <code>npm install promise-polyfill --save-exact</code>
 
-* If error persists, try installing Firebase version 3.6.6 for Angular2@4.0.0:
-  npm install --save firebase@3.6.6
+  * If error persists, try installing Firebase version 3.6.6 for Angular2@4.0.0 <code>npm install --save firebase@3.6.6</code>
+
+* Terminal- <code>ng serve</code>
+
+* Open Chrome browser and input in address field <code>localhost:4200</code>
+
+## Bugs
+
+No known bugs.
+
+## Link
+
+Click here https://github.com/safiyc/club-manager.git to access the Github page for this project.
+
+## Pending Features
+
+* Styling and improved layout to make it user friendly
+
+* Include an area called "announcements" and "events"
+
+* Implement AngularFire/Firebase user authentication
+
+* Deploy your application. Include a link to the live site in your project's README
+
+
+## License
+
+This software is licensed under the MIT licensed
